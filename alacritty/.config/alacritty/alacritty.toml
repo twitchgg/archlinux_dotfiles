@@ -11,7 +11,7 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.65
+opacity = 0.80
 blur = true
 
 [selection]

@@ -2,6 +2,7 @@ return {
   "serenevoid/kiwi.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    { "MeanderingProgrammer/markdown.nvim", enabled = false },
   },
   opts = {
     {

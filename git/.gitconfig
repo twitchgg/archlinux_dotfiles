@@ -3,3 +3,5 @@
 	name = TwitchGG
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true

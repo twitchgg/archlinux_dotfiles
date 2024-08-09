@@ -1,6 +1,7 @@
 return {
   {
     "akinsho/toggleterm.nvim",
+    lazy = false,
     cmd = "ToggleTerm",
     build = ":ToggleTerm",
     keys = { { "<C-\\>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },

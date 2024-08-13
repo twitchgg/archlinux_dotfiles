@@ -13,6 +13,11 @@ return {
       require("neorg").setup({
         load = {
           ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.keybinds"] = {
+            config = {
+              default_keybinds = true,
+            },
+          }, -- Loads key binding
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
           ["core.ui.calendar"] = {},
           ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },

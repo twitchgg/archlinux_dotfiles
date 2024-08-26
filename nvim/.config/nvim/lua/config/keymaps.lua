@@ -3,3 +3,7 @@
 -- Add any additional keymaps here
 local map = LazyVim.safe_keymap_set
 map("v", "<leader>cn", ":CarbonNow<CR>", { desc = "Carbon Now", remap = true })
+
+-- floating terminal
+local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root(), border = "rounded" }) end
+map("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })

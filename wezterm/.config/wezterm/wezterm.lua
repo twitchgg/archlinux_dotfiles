@@ -33,6 +33,4 @@ config.visual_bell = {
 
 config.default_cursor_style = "BlinkingBlock"
 
-config.scrollback_lines = 10000
-
 return config

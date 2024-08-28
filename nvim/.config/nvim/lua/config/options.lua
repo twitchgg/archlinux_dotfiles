@@ -3,6 +3,7 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.mouse = "" -- Disable mouse
+opt.clipboard = "unnamed,unnamedplus"
 
 if vim.g.neovide then
   opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h11"

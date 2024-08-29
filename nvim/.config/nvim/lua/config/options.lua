@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local opt = vim.opt
-opt.mouse = "" -- Disable mouse
+opt.mouse = "" -- disable mouse
 opt.clipboard = "unnamed,unnamedplus"
 
 if vim.g.neovide then
@@ -29,4 +29,6 @@ if vim.g.neovide then
   vim.g.neovide_floating_z_height = 10
   vim.g.neovide_light_angle_degrees = 45
   vim.g.neovide_light_radius = 5
+
+  opt.mouse = "a" -- enable mouse
 end

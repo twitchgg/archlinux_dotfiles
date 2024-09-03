@@ -23,8 +23,16 @@ config.visual_bell = {
   fade_out_function = "EaseOut",
   fade_out_duration_ms = 150,
 }
+
 config.colors = {
   visual_bell = "#202020",
+  -- Make the selection text color fully transparent.
+  -- When fully transparent, the current text color will be used.
+  selection_fg = 'none',
+  -- Set the selection background color with alpha.
+  -- When selection_bg is transparent, it will be alpha blended over
+  -- the current cell background color, rather than replace it
+  selection_bg = 'rgba(50% 50% 50% 50%)',
 }
 
 config.visual_bell = {
@@ -34,5 +42,7 @@ config.visual_bell = {
 }
 
 config.default_cursor_style = "BlinkingBlock"
+config.window_background_opacity = 1
+config.text_background_opacity = 1
 
 return config

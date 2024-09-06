@@ -10,7 +10,7 @@ style = "Regular"
 [window]
 opacity = 0.75
 blur = true
-dimensions = { columns = 180, lines = 50 }
+dimensions = { columns = 225, lines = 53 }
 decorations_theme_variant = "Dark"
 
 [selection]

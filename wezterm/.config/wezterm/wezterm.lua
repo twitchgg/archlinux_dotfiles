@@ -9,7 +9,7 @@ config.color_scheme = "catppuccin-macchiato"
 
 config.line_height = 1.0
 config.font = wezterm.font_with_fallback({ "JetBrainsMono Nerd Font", { family = "LXGW WenKai", scale = 1 } })
-config.font_size = 12
+config.font_size = 11
 
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = true

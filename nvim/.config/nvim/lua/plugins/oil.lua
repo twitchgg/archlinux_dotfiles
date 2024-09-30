@@ -3,6 +3,7 @@ return {
   cmd = "Oil",
   build = ":Oil",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+
   keys = {
     {
       "<leader>e",
@@ -31,7 +32,7 @@ return {
     float = {
       -- Padding around the floating window
       padding = 2,
-      max_width = 0,
+      max_width = 150,
       max_height = 0,
       border = "rounded",
       win_options = {

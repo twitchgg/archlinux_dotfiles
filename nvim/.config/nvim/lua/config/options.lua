@@ -5,6 +5,8 @@ local opt = vim.opt
 opt.mouse = "a"
 opt.wrap = true
 opt.clipboard = "unnamed,unnamedplus"
+-- If no prettier config file is found, the formatter will not be used
+-- vim.g.lazyvim_prettier_needs_config = false
 
 if vim.g.neovide then
   opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h11"
@@ -18,7 +20,7 @@ if vim.g.neovide then
   vim.g.neovide_light_radius = 5
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_underline_stroke_scale = 1.0
-  vim.g.neovide_theme = 'dark'
+  vim.g.neovide_theme = "dark"
   vim.g.neovide_no_idle = true
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_cursor_antialiasing = true

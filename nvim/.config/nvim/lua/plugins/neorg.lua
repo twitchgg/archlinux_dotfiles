@@ -12,7 +12,7 @@ return {
     config = function()
       require("neorg").setup({
         load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.defaults"] = {},  -- Loads default behaviour
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
           ["core.ui.calendar"] = {},
           ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },

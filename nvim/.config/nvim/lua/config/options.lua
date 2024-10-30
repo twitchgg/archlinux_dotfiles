@@ -3,6 +3,8 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.mouse = "a"
+opt.spelllang = 'en_us'
+opt.spell = false
 
 if vim.g.neovide then
   opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h11"

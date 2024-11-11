@@ -1,3 +1,6 @@
+require 'wezterm'.on('format-window-title', function()
+  return 'Neovim'
+end)
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 

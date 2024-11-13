@@ -5,10 +5,10 @@ return {
     cmd = "ToggleTerm",
     build = ":ToggleTerm",
     -- keys = { { "<leader>\\", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
-    keys = { { "<localleader>\\", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
+    -- keys = { { "<localleader>\\", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
     opts = {
       -- open_mapping = [[<leader>\]],
-      open_mapping = [[<localleader>\]],
+      -- open_mapping = [[<localleader>\]],
       direction = "horizontal",
       shade_filetypes = {},
       hide_numbers = true,

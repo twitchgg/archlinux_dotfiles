@@ -5,10 +5,8 @@ local map = LazyVim.safe_keymap_set
 local wk = require("which-key")
 map("v", "<leader>cn", ":CarbonNow<CR>", { desc = "Carbon Now", remap = true })
 
--- floating terminal
-local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root(), border = "rounded" }) end
-map("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
-
+map("n", "<c-/>", ":ToggleTerm direction=float <CR>", { desc = "Open terminal" })
+map("n", "<leader>bt", ":ToggleTerm direction=float <CR>", { desc = "Open terminal" })
 wk.add({ "<leader>o", group = "Neorg" })
 map("n", "<leader>oi", ":Neorg index<CR>", { desc = "Neorg Index", remap = true })
 map("n", "<leader>ow", ":Neorg workspace work<CR>", { desc = "Neorg Workspace Work", remap = true })

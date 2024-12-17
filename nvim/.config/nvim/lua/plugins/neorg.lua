@@ -1,12 +1,15 @@
 return {
   {
     "vhyrro/luarocks.nvim",
-    priority = 1000,
+    -- priority = 1000,
     config = true,
   },
   {
     "nvim-neorg/neorg",
-    dependencies = { "luarocks.nvim" },
+    dependencies = {
+      "luarocks.nvim",
+      "hrsh7th/nvim-cmp",
+    },
     version = "*",
     -- config = true,
     config = function()
@@ -15,8 +18,8 @@ return {
           ["core.defaults"] = {},  -- Loads default behaviour
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
           ["core.ui.calendar"] = {},
-          ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
-          ["core.integrations.nvim-cmp"] = {},
+          -- ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
+          -- ["core.integrations.nvim-cmp"] = {},
           -- ["core.concealer"] = { config = { icon_preset = "diamond" } },
           ["core.esupports.metagen"] = { config = { type = "auto", update_date = true } },
           ["core.qol.toc"] = {},

@@ -5,14 +5,14 @@ end)
 local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
-config.initial_cols = 180
-config.initial_rows = 47
+config.initial_cols = 220
+config.initial_rows = 50
 
 config.color_scheme = "catppuccin-macchiato"
 
 config.line_height = 1.0
 config.font = wezterm.font_with_fallback({ "JetBrainsMono Nerd Font", { family = "LXGW WenKai", scale = 1 } })
-config.font_size = 12
+config.font_size = 14
 
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = true

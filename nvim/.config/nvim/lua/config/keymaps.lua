@@ -12,3 +12,10 @@ map("n", "<leader>oi", ":Neorg index<CR>", { desc = "Neorg Index", remap = true 
 map("n", "<leader>ow", ":Neorg workspace work<CR>", { desc = "Neorg Workspace Work", remap = true })
 map("n", "<leader>on", ":Neorg workspace notes<CR>", { desc = "Neorg Workspace Notes", remap = true })
 map("n", "<leader>or", ":Neorg return<CR>", { desc = "Return to previous editor status", remap = true })
+
+
+wk.add({ "<leader>m", group = "Marks" })
+map("n", "<leader>ma", ":MarksListAll<CR>",
+  { desc = "Fill the location list with all marks in all open buffers", remap = true })
+map("n", "<leader>mb", ":BookmarksListAll<CR>",
+  { desc = "Fill the location list with all bookmarks, across all groups", remap = true })

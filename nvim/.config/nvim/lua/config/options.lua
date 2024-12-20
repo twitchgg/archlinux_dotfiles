@@ -5,6 +5,36 @@ local opt = vim.opt
 opt.mouse = "a"
 opt.spelllang = 'en_us'
 opt.spell = false
+opt.clipboard = { 'unnamed' }
+-- opt.clipboard = { "unnamedplus" }
+
+local function paste()
+  return {
+    vim.split(vim.fn.getreg(''), '\n'),
+    vim.fn.getregtype(''),
+  }
+end
+
+if (os.getenv("TMUX") == nil)
+then
+  if (os.getenv('SSH_TTY') == nil)
+  then
+    opt.clipboard:append("unnamedplus")
+  else
+    opt.clipboard:append("unnamedplus")
+    vim.g.clipboard = {
+      name = 'OSC 52',
+      copy = {
+        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+      },
+      paste = {
+        ["+"] = paste,
+        ["*"] = paste,
+      },
+    }
+  end
+end
 
 if vim.g.neovide then
   opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h11"

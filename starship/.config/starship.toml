@@ -48,7 +48,7 @@ disabled = false     # Disabled by default
 
 [os.symbols]
 Fedora = " "
-openSUSE = " "
+Macos = "󰘳 "
 
 [directory]
 style = "bg:#DA627D"

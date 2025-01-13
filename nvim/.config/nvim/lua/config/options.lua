@@ -7,8 +7,8 @@ opt.spelllang = 'en_us'
 opt.spell = false
 
 if vim.g.neovide then
-  opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h11"
-  vim.g.neovide_transparency = 0.0
+  opt.guifont = "JetBrainsMono Nerd Font,LXGW WenKai:h18"
+  vim.g.neovide_transparency = 0.8
   vim.g.transparency = 0.8
   -- Helper function for transparency formatting
   local alpha = function()

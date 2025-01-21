@@ -21,7 +21,7 @@ return {
     -- optional picker
     { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
     -- optional picker
-    { "ibhagwan/fzf-lua" },
+    -- { "ibhagwan/fzf-lua" },
     { "Shatur/neovim-session-manager" },
   },
   lazy = false,

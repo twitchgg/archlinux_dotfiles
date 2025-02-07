@@ -2,15 +2,14 @@ return {
   "coffebar/neovim-project",
   opts = {
     projects = { -- define project roots
-      "~/Develop/language/go/devonline.club/*",
-      "~/Develop/language/go/ntsc.ac.cn/*",
+      "~/Develop/go/workspace/devonline.club/*",
+      "~/Develop/go/workspace/ntsc.ac.cn/*",
     },
     last_session_on_startup = false,
     picker = {
       type = "fzf-lua", -- or "fzf-lua"
       -- type = "telescope", -- or "fzf-lua"
     },
-    last_session_on_startup = false
   },
   init = function()
     -- enable saving the state of plugins in the session

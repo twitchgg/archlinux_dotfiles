@@ -9,11 +9,11 @@ config.initial_cols = 150
 config.initial_rows = 36
 config.window_decorations = "NONE"
 
-config.color_scheme = "catppuccin-macchiato"
+config.color_scheme = "Catppuccin Mocha"
 
 config.line_height = 1.0
 config.font = wezterm.font_with_fallback({ "JetBrainsMono Nerd Font", { family = "LXGW WenKai", scale = 1 } })
-config.font_size = 13
+config.font_size = 19
 
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = true
@@ -46,7 +46,15 @@ config.visual_bell = {
 }
 
 config.default_cursor_style = "BlinkingBlock"
-config.window_background_opacity = 0.9
-config.text_background_opacity = 0.9
+config.window_background_opacity = 0.95
+config.text_background_opacity = 0.95
+
+config.keys = {
+  {
+    key = 'f',
+    mods = 'CMD',
+    action = wezterm.action.ToggleFullScreen,
+  }
+}
 
 return config

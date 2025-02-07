@@ -50,3 +50,4 @@
 
 (package! catppuccin-theme)
 (package! org-bullets)
+(package! org-modern)

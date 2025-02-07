@@ -23,10 +23,12 @@
 ;;
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 20 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 20))
-;; (dolist (charset '(kana han cjk-misc bopomofo))
-;;   (set-fontset-font (frame-parameter nil 'font)
-;;     charset (font-spec :family "IBM Plex Sans SC" :size 20)))
 (set-fontset-font "fontset-default" 'han (font-spec :family "LXGW WenKai Mono" :size 20))
+;; (setq doom-themes-enable-bold t
+;;       doom-themes-enable-italic t)
+;; (set-face-attribute 'font-lock-comment-face nil :foreground "#5B6268" :slant 'italic)
+;; (set-face-attribute 'font-lock-function-name-face nil :foreground "#c678dd" :slant 'italic)
+;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#dcaeea" :slant 'italic)
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -38,7 +40,6 @@
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-one)
 (setq doom-theme 'catppuccin)
-
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 ;; (setq display-line-numbers-type t)
@@ -47,7 +48,15 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/org/")
-
+(setq org-agenda-files (directory-files-recursively "~/Documents/org/" "\\.org$"))
+(setq org-hide-emphasis-markers t)
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+;; (use-package! org-modern
+;;   :hook (org-mode . global-org-modern-mode)
+;;   :config
+;;   (setq org-modern-label-border 0.3))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -72,6 +81,8 @@
 ;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
 ;;
+(map! "C-x e e" #'elfeed
+      "C-x e u" #'elfeed-update)
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
@@ -82,3 +93,6 @@
 ;; they are implemented.
 (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
 (set-frame-parameter (selected-frame) 'alpha '(90 . 90)) (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+
+(setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+(catppuccin-reload)
